@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 
+"""
+Search a given URL for phrases in specific locations on the page. This is useful for checking a news feed.
+"""
+
 import urllib.request
 from bs4 import BeautifulSoup
 
-match_file = '/home/dotancohen/code/ynet-search-phrases-data.txt' # TESTING
-#match_file = '/home/dotancohen/.bin/ynet-search-phrases-data.txt' # PRODUCTION
+match_file = '/home/foobar/search-phrases-data.txt'
 
-url = 'http://www.ynet.co.il/home/0,7340,L-184,00.html'
+url = 'http://example.com/page.html'
 search_phrases_dict = {
-	'.smallheader': ['אופניים חשמליים', 'באר שבע', 'אשכולות']
+	'.titles': ['foo bar', 'baz'],
+	'.people': ['Linus Torvalds', 'Archimedes']
 }
 
 
